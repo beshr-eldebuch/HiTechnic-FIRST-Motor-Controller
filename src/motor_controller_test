@@ -1,0 +1,19 @@
+//Arduino Example
+
+#include <Wire.h>
+
+#include "motor_controller.h"
+
+MotorController Controller1 = MotorController(1);
+//MotorController Controller2 = MotorController(2);
+
+void setup()
+{  
+  Wire.begin();
+};
+
+void loop()
+{
+  Controller1.move_constant_speed(20, 20);
+  //Controller2.move_constant_speed(20, 20);
+};
